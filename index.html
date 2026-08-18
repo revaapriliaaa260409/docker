@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAWAL YENI FOREVER</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(circle at top left, #8b0038 0%, transparent 35%),
+                radial-gradient(circle at bottom right, #4b0082 0%, transparent 35%),
+                linear-gradient(135deg, #090009, #210014, #12001f, #050505);
+
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Efek cahaya */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: #ff0055;
+            filter: blur(150px);
+            opacity: 0.25;
+            top: -100px;
+            left: -100px;
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: #7b00ff;
+            filter: blur(150px);
+            opacity: 0.25;
+            bottom: -120px;
+            right: -100px;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 900px;
+            padding: 70px 30px;
+            text-align: center;
+
+            background: rgba(20, 0, 20, 0.55);
+            border: 1px solid rgba(255, 0, 100, 0.3);
+            border-radius: 25px;
+
+            box-shadow:
+                0 0 40px rgba(255, 0, 90, 0.15),
+                inset 0 0 30px rgba(130, 0, 255, 0.08);
+
+            backdrop-filter: blur(15px);
+        }
+
+        .small-text {
+            font-size: 15px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #ff7ba9;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(40px, 8vw, 85px);
+            font-weight: 800;
+            letter-spacing: 4px;
+
+            background: linear-gradient(
+                90deg,
+                #ff174f,
+                #ff4f91,
+                #b347ff,
+                #7b00ff
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            text-shadow:
+                0 0 20px rgba(255, 0, 90, 0.35),
+                0 0 50px rgba(130, 0, 255, 0.2);
+
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        .line {
+            width: 120px;
+            height: 3px;
+            margin: 30px auto;
+            border-radius: 10px;
+
+            background: linear-gradient(
+                90deg,
+                #ff174f,
+                #9c27b0,
+                #7b00ff
+            );
+
+            box-shadow: 0 0 15px #ff0055;
+        }
+
+        .description {
+            color: #d8c5d8;
+            font-size: 17px;
+            letter-spacing: 2px;
+            line-height: 1.8;
+        }
+
+        .heart {
+            margin-top: 30px;
+            font-size: 35px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 5px rgba(255, 0, 80, 0.3));
+            }
+
+            to {
+                filter: drop-shadow(0 0 20px rgba(180, 0, 255, 0.7));
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 50px 20px;
+            }
+
+            .small-text {
+                font-size: 11px;
+                letter-spacing: 3px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="small-text">
+            Welcome to our website
+        </div>
+
+        <h1>SAWAL YENI<br>FOREVER</h1>
+
+        <div class="line"></div>
+
+        <p class="description">
+            Sebuah website kecil dengan cerita yang besar.
+            <br>
+            Merah, ungu, hitam — dan tetap forever.
+        </p>
+
+        <div class="heart">
+            ♥
+        </div>
+
+    </div>
+
+</body>
+</html>
